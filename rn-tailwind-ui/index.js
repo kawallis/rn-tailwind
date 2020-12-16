@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   View as RnView,
   ScrollView as RnScrollView,
@@ -6,34 +6,41 @@ import {
   Image as RnImage,
   TextInput as RnTextInput,
   TouchableOpacity as RnTouchableOpacity,
+  ImageBackground as RnImageBackground,
   StyleSheet,
-} from 'react-native'
-import { useTailwindUI, sortClassName, removeUnNeededClasses } from './tailwind'
+} from "react-native";
 
-const buildComponent = Component => ({ className, style, ...rest }) => {
-  let windowSize = useTailwindUI()
+import {
+  useTailwindUI,
+  sortClassName,
+  removeUnNeededClasses,
+} from "./tailwind";
 
-  const props = { ...rest, style: [] }
+const buildComponent = (Component) => ({ className, style, ...rest }) => {
+  let windowSize = useTailwindUI();
+
+  const props = { ...rest, style: [] };
 
   if (className) {
-    const orderClasses = sortClassName(className)
+    const orderClasses = sortClassName(className);
     const filteredClasses = orderClasses.filter(Boolean);
     props.style = removeUnNeededClasses(filteredClasses, windowSize);
   }
 
   if (style) {
-    const inline = StyleSheet.create({ style })
-    props.style.push(inline.style)
+    const inline = StyleSheet.create({ style });
+    props.style.push(inline.style);
   }
 
-  return <Component {...props} />
-}
+  return <Component {...props} />;
+};
 
-export { TailwindUIProvider } from './tailwind'
-export * from './color'
-export const View = buildComponent(RnView)
-export const ScrollView = buildComponent(RnScrollView)
-export const Text = buildComponent(RnText)
-export const Image = buildComponent(RnImage)
-export const TextInput = buildComponent(RnTextInput)
-export const TouchableOpacity = buildComponent(RnTouchableOpacity)
+export { TailwindUIProvider } from "./tailwind";
+export * from "./color";
+export const View = buildComponent(RnView);
+export const ScrollView = buildComponent(RnScrollView);
+export const Text = buildComponent(RnText);
+export const Image = buildComponent(RnImage);
+export const ImageBackground = buildComponent(RnImageBackground);
+export const TextInput = buildComponent(RnTextInput);
+export const TouchableOpacity = buildComponent(RnTouchableOpacity);
