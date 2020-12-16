@@ -41,6 +41,15 @@ const App = () => (
 
 ## Supported Utilities
 
+### Effects
+
+- [Opacity](https://tailwindcss.com/docs/opacity)
+- [Box Shadow](https://tailwindcss.com/docs/box-shadow)
+
+### Responsive
+
+- [Responsive Design](https://v1.tailwindcss.com/docs/responsive-design)
+
 ### Layout
 
 - [Display](https://tailwindcss.com/docs/display) (only `hidden` and `flex`)
@@ -101,12 +110,3 @@ const App = () => (
 - [Border Style](https://tailwindcss.com/docs/border-style) (all except `border-current`)
 - [Border Width](https://tailwindcss.com/docs/border-width)
 - [Border Radius](https://tailwindcss.com/docs/border-radius)
-
-### Effects
-
-- [Opacity](https://tailwindcss.com/docs/opacity)
-- [Box Shadow](https://tailwindcss.com/docs/box-shadow)
-
-### Responsive
-
-- [Responsive Design](https://v1.tailwindcss.com/docs/responsive-design)
