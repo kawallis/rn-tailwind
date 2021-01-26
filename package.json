@@ -1,14 +1,21 @@
 {
   "name": "rn-tailwind",
   "version": "1.0.15",
-  "description": "a ui library",
+  "description": "Use the awesome tailwindcss library with react native and react-native-web",
   "main": "./build/index.js",
   "scripts": {
     "build": "babel src --out-dir build",
     "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [
+    "react",
+    "tailwind",
+    "tailwindcss",
+    "react-native",
+    "react-nativ-web"
+  ],
+  "author": "Chris Wallace",
   "license": "ISC",
   "dependencies": {
     "react-native-size-matters": "^0.3.1",
