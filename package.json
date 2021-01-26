@@ -1,6 +1,6 @@
 {
-  "name": "rn-tailwind-ui",
-  "version": "1.0.12",
+  "name": "rn-tailwind",
+  "version": "1.0.15",
   "description": "a ui library",
   "main": "./build/index.js",
   "scripts": {

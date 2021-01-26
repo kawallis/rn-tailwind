@@ -1,20 +1,21 @@
-# rn-tailwind-ui
+# rn-tailwind
 
 > Use [Tailwind CSS](https://tailwindcss.com) in [React Native] and [React Native Web] (https://reactnative.dev) projects
 
 ## Install
 
 ```
-$ npm install rn-tailwind-ui
+$ npm install rn-tailwind
 ```
 
 ## Usage
 
-Import TailwindUIProvider from the `rn-tailwind-ui` module, which is rendered at the top of our component tree.
+Import TailwindUIProvider from the `rn-tailwind` module, which is rendered at the top of our component tree.
 
 ```js
 import React from 'react'
 import App from './components/App'
+import { TailwindUIProvider } from "rn-tailwind";
 
 const Index = () => (
   <TailwindUIProvider>
@@ -23,10 +24,10 @@ const Index = () => (
 )
 ```
 
-Than import `rn-tailwind-ui` module and use any of the [supported utilities](#supported-utilities) from [Tailwind CSS](https://tailwindcss.com) in your [React Native](https://reactnative.dev) views.
+Than import `rn-tailwind` module and use any of the [supported utilities](#supported-utilities) from [Tailwind CSS](https://tailwindcss.com) in your [React Native](https://reactnative.dev) views.
 
 ```js
-import { View, Text } from "rn-tailwind-ui";
+import { View, Text } from "rn-tailwind";
 
 const App = () => (
   <View className="h-full xl:h-1/2">
@@ -40,6 +41,10 @@ const App = () => (
 ```
 
 ## Supported Utilities
+
+### Media Queries
+
+- [Responsive Design](https://tailwindcss.com/docs/responsive-design)
 
 ### Effects
 

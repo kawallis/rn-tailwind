@@ -16,7 +16,12 @@ import {
   removeUnNeededClasses,
 } from "./tailwind";
 
-const buildComponent = (Component) => ({ className, style, ...rest }) => {
+const buildComponent = (Component) => ({
+  className,
+  contentContainerClassName,
+  style,
+  ...rest
+}) => {
   let windowSize = useTailwindUI();
 
   const props = { ...rest, style: [] };
@@ -25,6 +30,15 @@ const buildComponent = (Component) => ({ className, style, ...rest }) => {
     const orderClasses = sortClassName(className);
     const filteredClasses = orderClasses.filter(Boolean);
     props.style = removeUnNeededClasses(filteredClasses, windowSize);
+  }
+
+  if (contentContainerClassName) {
+    const orderClasses = sortClassName(contentContainerClassName);
+    const filteredClasses = orderClasses.filter(Boolean);
+    props.contentContainerStyle = removeUnNeededClasses(
+      filteredClasses,
+      windowSize
+    );
   }
 
   if (style) {
